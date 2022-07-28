@@ -12,7 +12,32 @@ body {
   color: var(--header-color);
   background-color: var(--light-color);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Cтудия */
+
 .link {
   text-decoration: none;
   color: var(--header-color);
@@ -20,6 +45,10 @@ body {
 
 li {
   list-style: none;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .logo {
@@ -29,14 +58,41 @@ li {
   line-height: 1.19;
   color: var(--accent-color);
 }
+.logo-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-right: 93px;
+}
+.contact {
+  margin-left: 344px;
+}
+.main-nav {
+  display: flex;
+}
+.header {
+  border: 1px solid #ececec;
+}
 
 .nav-header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+}
+.nav-studio {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
+.nav-header li {
+  margin-right: 50px;
+}
+.nav-header li:last-child,
+.main-nav li:last-child {
+  margin-right: 0;
+}
 .nav-header .nav-studio:hover {
   color: var(--accent-color);
 }
@@ -51,9 +107,13 @@ li {
 
 .contacts {
   color: var(--text-color);
+  display: flex;
 }
 .hero {
   background-color: var(--fon-color);
+  display: block;
+  text-align: center;
+  padding: 200px 0;
 }
 
 .buttons:hover,
@@ -77,6 +137,24 @@ li {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--light-color);
+  width: 216px;
+  height: 50px;
+  margin-top: 40px;
+}
+.buttons-all {
+  padding-top: 10px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-text {
@@ -87,8 +165,15 @@ li {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-color);
+  width: 696px;
+  margin: auto;
 }
-
+.section-main {
+  padding-bottom: 94px;
+}
+.main-nav li {
+  margin-right: 30px;
+}
 .peculiarities {
   font-weight: 700;
   font-size: 14px;
@@ -109,15 +194,22 @@ li {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.applications {
+  padding-top: 50px;
 }
 .team-section {
   background-color: var(--team-color);
 }
-
 .team {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 4px 4px;
+  padding-top: 50px;
+}
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .team-name {
@@ -132,6 +224,7 @@ li {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  padding-top: 10px;
 }
 
 .contact-footer {
@@ -149,6 +242,9 @@ li {
 .footer-box {
   background-color: var(--fon-color);
 }
+.logo-footer {
+  padding-top: 60px;
+}
 
 .contact-footer:hover,
 .contact-footer:focus {
@@ -162,6 +258,13 @@ li {
   color: var(--light-color);
 }
 /*/Портфолио*/
+.section-portfolio {
+  padding-top: 94px;
+}
+.section-lite {
+  padding-top: 50px;
+  padding-bottom: 94px;
+}
 .buttons-portfolio {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -171,7 +274,16 @@ li {
   color: var(--header-color);
   background: var(--team-color);
   border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
+.portfolio-button li {
+  margin-right: 8px;
+}
+.portfolio-button li:last-child {
+  margin-right: 0;
+}
+
 .buttons-portfolio:hover,
 .buttons-portfolio:focus {
   background-color: var(--accent-color);
@@ -193,16 +305,66 @@ li {
   line-height: 1.8;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  padding-top: 4px;
 }
 .box {
-  box-sizing: border-box;
   background: var(--light-color);
 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
 }
+
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+}
+
+/*Футер*/
 .adresses {
   font-style: normal;
 }
-.all-buttons{
+.adresses-footer-gps {
+  padding-top: 20px;
+}
+
+.adresses-footer-mail {
+  padding-top: 9px;
+}
+.adresses-footer-tel {
+  padding-top: 9px;
+  padding-bottom: 60px;
+}
+
+.all-buttons {
   background-color: var(--accent-color);
   color: var(--light-color);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.box-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.portfolio-box-text {
+  padding: 24px 20px;
+}
+.box-cart {
+  background: var(--light-color);
+
+  border: 1px solid #eeeeee;
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.box-cart:nth-child(3n) {
+  margin-right: 0;
+}
+.box-cart:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
