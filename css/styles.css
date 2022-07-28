@@ -275,6 +275,9 @@ li {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
+  border: none;
+  height: 38px;
+  padding: 0 22px;
 }
 .portfolio-button li {
   margin-right: 8px;
@@ -351,7 +354,7 @@ img {
   align-content: space-around;
 }
 .portfolio-box-text {
-  padding: 24px 20px;
+  padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 .box-cart {
